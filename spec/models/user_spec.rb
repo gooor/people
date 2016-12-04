@@ -11,6 +11,7 @@ describe User do
   it { should belong_to :primary_role }
   it { should have_and_belong_to_many :abilities }
   it { should have_and_belong_to_many :teams }
+  it { is_expected.to have_many :skills }
 
   context 'validation' do
     it { should be_valid }
