@@ -7,6 +7,7 @@ describe Skill do
   it { is_expected.to  validate_presence_of :name }
   it { is_expected.to  validate_presence_of :skill_category }
   it { is_expected.to  validate_presence_of :rate_type }
+  it { is_expected.to  validate_inclusion_of(:rate_type).in_array(%w(boolean range)) }
 
   describe 'uniques validation' do
     let(:category) { create(:skill_category) }
