@@ -7,7 +7,6 @@ class Skill < ActiveRecord::Base
   validates :rate_type, inclusion: { in: ::Skills::RateType.stringified_types }
   validate :uniques
 
-
   private
 
   def uniques
